@@ -313,19 +313,38 @@ document.addEventListener("DOMContentLoaded", () => {
   checkDeepLink();
 });
 
-// 1. Theme Management (Dark / Light)
+// 1. Theme Management (Light Mode First by Default)
 function initTheme() {
   const toggleBtn = document.getElementById("themeToggle");
-  const currentTheme = localStorage.getItem("theme") || "dark";
+
+  // Always show Light Mode first when opening the site
+  let currentTheme = "light";
+  try {
+    const sessionTheme = sessionStorage.getItem("theme");
+    if (sessionTheme) {
+      currentTheme = sessionTheme;
+    } else {
+      // First time opening the website: default to light mode
+      currentTheme = "light";
+      sessionStorage.setItem("theme", "light");
+      localStorage.setItem("theme", "light");
+    }
+  } catch (e) {
+    currentTheme = "light";
+  }
+
   document.documentElement.setAttribute("data-theme", currentTheme);
   updateThemeIcon(currentTheme);
 
   if (toggleBtn) {
     toggleBtn.addEventListener("click", () => {
-      const activeTheme = document.documentElement.getAttribute("data-theme");
+      const activeTheme = document.documentElement.getAttribute("data-theme") || "light";
       const nextTheme = activeTheme === "dark" ? "light" : "dark";
       document.documentElement.setAttribute("data-theme", nextTheme);
-      localStorage.setItem("theme", nextTheme);
+      try {
+        sessionStorage.setItem("theme", nextTheme);
+        localStorage.setItem("theme", nextTheme);
+      } catch (e) {}
       updateThemeIcon(nextTheme);
     });
   }
@@ -336,6 +355,7 @@ function updateThemeIcon(theme) {
   if (toggleBtn) {
     toggleBtn.innerHTML = theme === "dark" ? "☀️" : "🌙";
     toggleBtn.setAttribute("title", theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode");
+    toggleBtn.setAttribute("aria-label", theme === "dark" ? "Switch to Light Mode" : "Switch to Dark Mode");
   }
 }
 

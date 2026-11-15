@@ -1,720 +1,1405 @@
-<!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>P.V. Nimantha Madhushan | Software Developer & Full Stack Engineer</title>
-  
-  <meta name="description" content="Portfolio of P.V. Nimantha Madhushan - Bachelor of Computer Science (BCS) Undergraduate at University of Ruhuna. Full Stack Developer, Mobile App Specialist (Flutter, React Native), Java Developer, Game & 3D Artist." />
-  <meta name="keywords" content="Nimantha Madhushan, P.V. Nimantha Madhushan, Portfolio, Full Stack Developer, Flutter Developer, React Native, Spring Boot, Java, University of Ruhuna, Madhushan Studios, Sri Lanka" />
-  <meta name="author" content="P.V. Nimantha Madhushan" />
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      P.V. Nimantha Madhushan | Software Developer & Full Stack Engineer
+    </title>
 
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="P.V. Nimantha Madhushan | Software Developer & Full Stack Engineer" />
-  <meta property="og:description" content="Passionate Full-Stack Developer & Mobile Engineer. Skilled in Flutter, React, Spring Boot, Java, and Unreal Engine." />
-  <meta property="og:image" content="assets/images/Profile photo/1691471467073.jpeg" />
+    <meta
+      name="description"
+      content="Portfolio of P.V. Nimantha Madhushan - Bachelor of Computer Science (BCS) Undergraduate at University of Ruhuna. Full Stack Developer, Mobile App Specialist (Flutter, React Native), Java Developer, Game & 3D Artist."
+    />
+    <meta
+      name="keywords"
+      content="Nimantha Madhushan, P.V. Nimantha Madhushan, Portfolio, Full Stack Developer, Flutter Developer, React Native, Spring Boot, Java, University of Ruhuna, Madhushan Studios, Sri Lanka"
+    />
+    <meta name="author" content="P.V. Nimantha Madhushan" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="P.V. Nimantha Madhushan | Software Developer & Full Stack Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Passionate Full-Stack Developer & Mobile Engineer. Skilled in Flutter, React, Spring Boot, Java, and Unreal Engine."
+    />
+    <meta
+      property="og:image"
+      content="assets/images/Profile photo/1691471467073.jpeg"
+    />
 
-  <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-</head>
-<body>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 
-  <!-- Top Scroll Progress Bar -->
-  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>"
+    />
 
-  <!-- Navigation Bar -->
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">
-        <div class="nav-logo-badge">NM</div>
-        <span>Nimantha<span style="color: var(--accent-cyan);">.dev</span></span>
-      </a>
+    <!-- Immediate Light Mode Enforcer (Prevents Theme Flash) -->
+    <script>
+      (function () {
+        try {
+          var sessionTheme = sessionStorage.getItem("theme");
+          if (sessionTheme === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+          } else {
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        } catch (e) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <!-- Top Scroll Progress Bar -->
+    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#studio">Studio Apps</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-
-      <div class="nav-actions">
-        <!-- Resume / CV Download Button -->
-        <a href="https://01nimantha.github.io/CV/" target="_blank" class="btn btn-sm btn-primary">
-          <span>Resume / CV</span>
-          <span style="font-size: 0.8rem;">↗</span>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <div class="nav-logo-badge">NM</div>
+          <span
+            >Nimantha<span style="color: var(--accent-cyan)">.dev</span></span
+          >
         </a>
 
-        <!-- Theme Toggle -->
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle Color Theme">☀️</button>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#studio">Studio Apps</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
 
-        <!-- Mobile Menu Hamburger -->
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open Navigation Menu">☰</button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Hero Section with Interactive Tech Node Canvas -->
-  <section class="hero-section" id="hero">
-    <canvas id="heroCanvas" class="hero-canvas"></canvas>
-    <div class="hero-glow-1"></div>
-    <div class="hero-glow-2"></div>
-
-    <div class="container hero-grid">
-      <!-- Left Content -->
-      <div class="hero-content reveal">
-        <div class="status-badge">
-          <span class="status-dot"></span>
-          <span>Open for Opportunities & Internships</span>
-        </div>
-
-        <h1 class="hero-title">
-          Hi, I'm <br />
-          <span class="gradient-text">P.V. Nimantha</span> Madhushan
-        </h1>
-
-        <p class="hero-headline">
-          Building scalable solutions as a <br />
-          <span class="typing-role gradient-text" id="typingRole">Full-Stack Developer</span><span class="typing-cursor">|</span>
-        </p>
-
-        <p class="hero-bio">
-          Passionate Software Engineer with hands-on experience building scalable applications across 
-          web, mobile, and backend architectures. Proficient in Flutter, React Native, React, Spring Boot, Java, and modern SQL/NoSQL databases. Co-owner & developer at <a href="https://01nimantha.github.io/madhushan-studios/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); font-weight: 600; text-decoration: underline;">Madhushan Studios ↗</a>.
-        </p>
-
-        <!-- Call to Actions -->
-        <div class="hero-actions">
-          <a href="https://01nimantha.github.io/CV/" target="_blank" class="btn btn-primary">
-            <span>📄 Download My Resume</span>
+        <div class="nav-actions">
+          <!-- Resume / CV Download Button -->
+          <a
+            href="https://01nimantha.github.io/CV/"
+            target="_blank"
+            class="btn btn-sm btn-primary"
+          >
+            <span>Resume / CV</span>
+            <span style="font-size: 0.8rem">↗</span>
           </a>
-          <a href="#projects" class="btn btn-secondary">
-            <span>🚀 Explore Projects</span>
-          </a>
-          <a href="#contact" class="btn btn-outline">
-            <span>📬 Get In Touch</span>
-          </a>
-        </div>
 
-        <!-- Social Media / Connect Icons -->
-        <div class="hero-socials">
-          <a href="https://github.com/01nimantha" target="_blank" class="social-link" title="GitHub Profile">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-          </a>
-          <a href="https://www.linkedin.com/in/01nimantha/" target="_blank" class="social-link" title="LinkedIn Profile">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-          </a>
-          <a href="mailto:01nimantha@gmail.com" class="social-link" title="Email Nimantha">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
-          </a>
-          <a href="tel:+94762637657" class="social-link" title="Call / WhatsApp">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615l2.104-1.033z"/></svg>
-          </a>
+          <!-- Theme Toggle (Defaults to Moon icon for Light Mode) -->
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Switch to Dark Mode"
+            title="Switch to Dark Mode"
+          >
+            🌙
+          </button>
+
+          <!-- Mobile Menu Hamburger -->
+          <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            aria-label="Open Navigation Menu"
+          >
+            ☰
+          </button>
         </div>
       </div>
+    </header>
 
-      <!-- Right Avatar Visual -->
-      <div class="hero-visual reveal reveal-delay-2">
-        <div class="avatar-wrapper">
-          <div class="avatar-ring"></div>
-          <div class="avatar-container">
-            <img 
-              src="assets/images/Profile photo/1691471467073.jpeg" 
-              alt="P.V. Nimantha Madhushan" 
-              class="avatar-img"
-              loading="eager"
-            />
+    <!-- Hero Section with Interactive Tech Node Canvas -->
+    <section class="hero-section" id="hero">
+      <canvas id="heroCanvas" class="hero-canvas"></canvas>
+      <div class="hero-glow-1"></div>
+      <div class="hero-glow-2"></div>
+
+      <div class="container hero-grid">
+        <!-- Left Content -->
+        <div class="hero-content reveal">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Open for Opportunities & Internships</span>
           </div>
 
-          <!-- Floating Badges -->
-          <div class="hero-float-card top-right">
-            <span class="float-icon">📱</span>
-            <div>
-              <div class="float-title">Mobile Specialist</div>
-              <div class="float-val">Flutter & React Native</div>
-            </div>
-          </div>
+          <h1 class="hero-title">
+            Hi, I'm <br />
+            <span class="gradient-text">P.V. Nimantha</span> Madhushan
+          </h1>
 
-          <div class="hero-float-card bottom-left">
-            <span class="float-icon">🎓</span>
-            <div>
-              <div class="float-title">Undergraduate</div>
-              <div class="float-val">Univ. of Ruhuna (BCS)</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Quick Metrics / Stats Bar with Counter Animation -->
-  <div class="stats-section">
-    <div class="container stats-grid">
-      <div class="stat-card reveal">
-        <div class="stat-number gradient-text" data-count="4" data-suffix="+">4+</div>
-        <div class="stat-label">Published Play Store Apps</div>
-      </div>
-      <div class="stat-card reveal reveal-delay-1">
-        <div class="stat-number gradient-text" data-count="10" data-suffix="+">10+</div>
-        <div class="stat-label">Completed Software Projects</div>
-      </div>
-      <div class="stat-card reveal reveal-delay-2">
-        <div class="stat-number gradient-text" data-text="BCS">BCS</div>
-        <div class="stat-label">Univ. of Ruhuna Undergraduate</div>
-      </div>
-      <div class="stat-card reveal reveal-delay-3">
-        <div class="stat-number gradient-text" data-count="100" data-suffix="%">100%</div>
-        <div class="stat-label">Commitment to Privacy & Quality</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- About Me Section -->
-  <section id="about">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">About Me</span>
-        <h2 class="section-title">Engineering Scalable Software & Delightful User Experiences</h2>
-        <p class="section-description">
-          A balanced blend of theoretical computer science foundation and real-world production app development.
-        </p>
-      </div>
-
-      <div class="about-grid">
-        <!-- Bio & Philosophy -->
-        <div class="about-content reveal">
-          <h3>Driven by Innovation, Privacy, and Clean Code</h3>
-          <p>
-            I am an undergraduate pursuing my <strong>Bachelor of Computer Science (BCS)</strong> at the 
-            <strong>University of Ruhuna, Sri Lanka</strong>. I have built and deployed apps used by real customers, ranging from utility software and productivity planners to specialized enterprise billing solutions and gaming simulations.
-          </p>
-          <p>
-            Beyond academia, I co-own and develop software at <strong><a href="https://01nimantha.github.io/madhushan-studios/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">Madhushan Studios ↗</a></strong> alongside Ruwantha Madhushan. Together, we have authored, optimized, and deployed multiple published Android applications on the Google Play Store, managing the full development lifecycle from architecture to production release.
-          </p>
-          <p>
-            Whether it's writing robust backend APIs with Spring Boot and FastAPI, building dynamic mobile apps with Flutter, or experimenting with Unreal Engine 5 AI and Blender 3D character sculpting, I thrive at the intersection of logic, design, and performance.
+          <p class="hero-headline">
+            Building scalable solutions as a <br />
+            <span class="typing-role gradient-text" id="typingRole"
+              >Full-Stack Developer</span
+            ><span class="typing-cursor">|</span>
           </p>
 
-          <div class="about-highlights">
-            <div class="about-pill">
-              <span class="pill-icon">⚡</span>
-              <span>Full-Stack & Mobile Development</span>
-            </div>
-            <div class="about-pill">
-              <span class="pill-icon">🔒</span>
-              <span>100% Privacy & Zero-Data-Leak Design</span>
-            </div>
-            <div class="about-pill">
-              <span class="pill-icon">🎨</span>
-              <span>UI/UX Focused with Figma Mastery</span>
-            </div>
-            <div class="about-pill">
-              <span class="pill-icon">🎮</span>
-              <span>Game AI & 3D Asset Creation</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Academic & Quick Details Card -->
-        <div class="about-card-box reveal reveal-delay-2">
-          <div class="edu-item">
-            <div class="edu-icon">🎓</div>
-            <div class="edu-details">
-              <h4>Bachelor of Computer Science (BCS)</h4>
-              <div class="edu-school">University of Ruhuna, Sri Lanka</div>
-              <div class="edu-desc">Undergraduate Student • Department of Computer Science • Faculty of Science</div>
-            </div>
-          </div>
-
-          <div class="edu-item">
-            <div class="edu-icon">🏢</div>
-            <div class="edu-details">
-              <h4>Co-Owner & Lead Developer</h4>
-              <div class="edu-school"><a href="https://01nimantha.github.io/madhushan-studios/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Madhushan Studios ↗</a></div>
-              <div class="edu-desc">Independent mobile app development studio with 4+ live Android apps on Google Play.</div>
-            </div>
-          </div>
-
-          <div class="contact-quick-list">
-            <div class="contact-quick-item">
-              <span class="item-icon">📍</span>
-              <span><strong>Location:</strong> Horana, Western Province, Sri Lanka</span>
-            </div>
-            <div class="contact-quick-item">
-              <span class="item-icon">📧</span>
-              <span><strong>Email:</strong> <a href="mailto:01nimantha@gmail.com">01nimantha@gmail.com</a></span>
-            </div>
-            <div class="contact-quick-item">
-              <span class="item-icon">📞</span>
-              <span><strong>Phone:</strong> <a href="tel:+94762637657">+94 76 263 7657</a></span>
-            </div>
-            <div class="contact-quick-item">
-              <span class="item-icon">💼</span>
-              <span><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/01nimantha/" target="_blank">linkedin.com/in/01nimantha</a></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Madhushan Studios Published Apps Spotlight -->
-  <section id="studio" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Published Production Apps</span>
-        <h2 class="section-title">Madhushan Studios Spotlight</h2>
-        <p class="section-description">
-          Live applications published and maintained on the Google Play Store with thousands of users worldwide.
-        </p>
-        <div style="margin-top: 1.25rem;">
-          <a href="https://01nimantha.github.io/madhushan-studios/" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="display: inline-flex; align-items: center; gap: 8px; padding: 10px 22px; font-weight: 600; border-radius: var(--radius-full);">
-            <span>🌐</span> Visit Official Madhushan Studios Website ↗
-          </a>
-        </div>
-      </div>
-
-      <!-- Studio Apps Grid -->
-      <div class="skills-grid" style="grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));">
-        
-        <!-- App 1: Cat Tap Hunt -->
-        <div class="skill-category-card reveal reveal-delay-1">
-          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
-            <img src="https://play-lh.googleusercontent.com/gN1oqKE8nEvq8OIjdAtISeunBxRYI-Ml1g57eKESDc8C-OZGkPZ-DJiLQkNEncwmNgzqjTQRo-6cKK5vfy3j=w480-h960-rw" alt="Cat Tap Hunt" style="width: 60px; height: 60px; border-radius: 14px; object-fit: cover;" />
-            <div>
-              <h4 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.2rem;">Cat Tap Hunt</h4>
-              <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600;">Simulation & Video Rec</span>
-            </div>
-          </div>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
-            Cat hunting interactive game with automatic video recording, 11 realistic prey species, and custom physics.
+          <p class="hero-bio">
+            Passionate Software Engineer with hands-on experience building
+            scalable applications across web, mobile, and backend architectures.
+            Proficient in Flutter, React Native, React, Spring Boot, Java, and
+            modern SQL/NoSQL databases. Co-owner & developer at
+            <a
+              href="https://01nimantha.github.io/madhushan-studios/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style="
+                color: var(--accent-primary);
+                font-weight: 600;
+                text-decoration: underline;
+              "
+              >Madhushan Studios ↗</a
+            >.
           </p>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <a href="https://play.google.com/store/apps/details?id=com.vrnt.cat_tap_hunt_kitty_game" target="_blank" class="btn btn-sm btn-playstore" style="flex:1;">Google Play</a>
-            <a href="cat-tap-hunt.html" class="btn btn-sm btn-outline">Read More</a>
+
+          <!-- Call to Actions -->
+          <div class="hero-actions">
+            <a
+              href="https://01nimantha.github.io/CV/"
+              target="_blank"
+              class="btn btn-primary"
+            >
+              <span>📄 Download My Resume</span>
+            </a>
+            <a href="#projects" class="btn btn-secondary">
+              <span>🚀 Explore Projects</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <span>📬 Get In Touch</span>
+            </a>
+          </div>
+
+          <!-- Social Media / Connect Icons -->
+          <div class="hero-socials">
+            <a
+              href="https://github.com/01nimantha"
+              target="_blank"
+              class="social-link"
+              title="GitHub Profile"
+            >
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/01nimantha/"
+              target="_blank"
+              class="social-link"
+              title="LinkedIn Profile"
+            >
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                />
+              </svg>
+            </a>
+            <a
+              href="mailto:01nimantha@gmail.com"
+              class="social-link"
+              title="Email Nimantha"
+            >
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"
+                />
+              </svg>
+            </a>
+            <a
+              href="tel:+94762637657"
+              class="social-link"
+              title="Call / WhatsApp"
+            >
+              <svg
+                width="20"
+                height="20"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M20 22.621l-3.521-6.795c-.008.004-1.974.97-2.064 1.011-2.24 1.086-6.799-7.82-4.609-8.994l2.083-1.026-3.493-6.817-2.106 1.039c-7.202 3.755 4.233 25.982 11.6 22.615l2.104-1.033z"
+                />
+              </svg>
+            </a>
           </div>
         </div>
 
-        <!-- App 2: Todo List -->
-        <div class="skill-category-card reveal reveal-delay-2">
-          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
-            <img src="assets/images/Todo List/1754559609910.jpeg" alt="Todo List" style="width: 60px; height: 60px; border-radius: 14px; object-fit: cover;" onerror="this.onerror=null; this.src='https://play-lh.googleusercontent.com/VMR6_UUwS9ABCM4vSwOJ-vAzoeyW_CvWBXtwa_FwvtP8-VIpZjMp_d6HTRlzdtipg4bOJ2V2gnKrwXPkAV-R=w480-h960-rw';" />
-            <div>
-              <h4 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.2rem;">Todo List</h4>
-              <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600;">Productivity & Tasks</span>
+        <!-- Right Avatar Visual -->
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="avatar-wrapper">
+            <div class="avatar-ring"></div>
+            <div class="avatar-container">
+              <img
+                src="assets/images/Profile photo/1691471467073.jpeg"
+                alt="P.V. Nimantha Madhushan"
+                class="avatar-img"
+                loading="eager"
+              />
             </div>
-          </div>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
-            Minimalist, zero-data-collection task planner and daily reminder app built with Flutter and Provider.
-          </p>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <a href="https://play.google.com/store/apps/details?id=com.todolist.todo_list" target="_blank" class="btn btn-sm btn-playstore" style="flex:1;">Google Play</a>
-            <a href="todo-list.html" class="btn btn-sm btn-outline">Read More</a>
-          </div>
-        </div>
 
-        <!-- App 3: VRNT Engineers -->
-        <div class="skill-category-card reveal reveal-delay-3">
-          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
-            <img src="https://play-lh.googleusercontent.com/yTdKci_R2glOmmrDUkj8o8CcdIXVUa71w2Qwu2hYG4BSekzktZvcxeFp7NBDb1IisqE8-wZqx0t-JGCyQ2YQ6w=w480-h960-rw" alt="VRNT Engineers" style="width: 60px; height: 60px; border-radius: 14px; object-fit: cover;" />
-            <div>
-              <h4 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.2rem;">VRNT Engineers</h4>
-              <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600;">Business & Billing</span>
-            </div>
-          </div>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
-            Professional PDF invoicing & estimation tool tailored for construction businesses with WhatsApp export.
-          </p>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <a href="https://play.google.com/store/apps/details?id=com.vrnt.engineers" target="_blank" class="btn btn-sm btn-playstore" style="flex:1;">Google Play</a>
-            <a href="vrnt-engineers.html" class="btn btn-sm btn-outline">Read More</a>
-          </div>
-        </div>
-
-        <!-- App 4: Calculator -->
-        <div class="skill-category-card reveal reveal-delay-4">
-          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1rem;">
-            <img src="https://play-lh.googleusercontent.com/PtxNgNKT23-IsUpOwoau_nxvtO8b5XHUNEH9175s--U64Wd_5QungrkMrY_1Y2QB9esIhLaWr0MbjTyLMNNI=w480-h960-rw" alt="Calculator" style="width: 60px; height: 60px; border-radius: 14px; object-fit: cover;" />
-            <div>
-              <h4 style="font-size: 1.15rem; color: var(--text-primary); margin-bottom: 0.2rem;">Smart Calculator</h4>
-              <span style="font-size: 0.8rem; color: var(--accent-cyan); font-weight: 600;">Math & Split Tablet UI</span>
-            </div>
-          </div>
-          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1.25rem;">
-            Responsive offline calculator with Hive NoSQL history persistence and tablet dual-pane layout.
-          </p>
-          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-            <a href="https://play.google.com/store/apps/details?id=com.ceynext.calculator_app" target="_blank" class="btn btn-sm btn-playstore" style="flex:1;">Google Play</a>
-            <a href="calculator.html" class="btn btn-sm btn-outline">Read More</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Technical Skills Section -->
-  <section id="skills">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Expertise</span>
-        <h2 class="section-title">Technical Skills & Technologies</h2>
-        <p class="section-description">
-          A versatile toolkit spanning mobile development, full-stack web architectures, enterprise Java, and 3D game engines.
-        </p>
-      </div>
-
-      <div class="skills-grid">
-        <!-- Mobile App Development -->
-        <div class="skill-category-card reveal reveal-delay-1">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">📱</div>
-            <h4>Mobile Development</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Flutter</span>
-            <span class="skill-tag">Dart</span>
-            <span class="skill-tag">React Native</span>
-            <span class="skill-tag">Provider (State)</span>
-            <span class="skill-tag">Android Studio</span>
-            <span class="skill-tag">Google Play Console</span>
-            <span class="skill-tag">flutter_stripe</span>
-            <span class="skill-tag">SharedPreferences</span>
-          </div>
-        </div>
-
-        <!-- Full Stack & Web -->
-        <div class="skill-category-card reveal reveal-delay-2">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">🌐</div>
-            <h4>Web & Full Stack</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">React.js</span>
-            <span class="skill-tag">Redux</span>
-            <span class="skill-tag">JavaScript (ES6+)</span>
-            <span class="skill-tag">HTML5 & CSS3</span>
-            <span class="skill-tag">Bootstrap</span>
-            <span class="skill-tag">Spring Boot</span>
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express.js</span>
-            <span class="skill-tag">FastAPI (Python)</span>
-            <span class="skill-tag">RESTful APIs</span>
-          </div>
-        </div>
-
-        <!-- Databases & Cloud Backend -->
-        <div class="skill-category-card reveal reveal-delay-3">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">🗄️</div>
-            <h4>Databases & Cloud</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">MySQL</span>
-            <span class="skill-tag">Cloud Firestore</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">Firebase Auth</span>
-            <span class="skill-tag">Hive (NoSQL)</span>
-            <span class="skill-tag">JSON / REST APIs</span>
-          </div>
-        </div>
-
-        <!-- Software Engineering & Java -->
-        <div class="skill-category-card reveal reveal-delay-1">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">☕</div>
-            <h4>Java & Software Eng</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">OOP Principles</span>
-            <span class="skill-tag">Java Swing GUI</span>
-            <span class="skill-tag">File Handling / IO</span>
-            <span class="skill-tag">Unit Testing</span>
-            <span class="skill-tag">Data Structures</span>
-          </div>
-        </div>
-
-        <!-- Game Dev & 3D Art -->
-        <div class="skill-category-card reveal reveal-delay-2">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">🎮</div>
-            <h4>Game Dev & 3D Art</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Unreal Engine 5</span>
-            <span class="skill-tag">UE5 Blueprints</span>
-            <span class="skill-tag">AI Behavior Trees</span>
-            <span class="skill-tag">Blender (3D)</span>
-            <span class="skill-tag">Character Sculpting</span>
-            <span class="skill-tag">Texture Painting</span>
-            <span class="skill-tag">Armature Rigging</span>
-            <span class="skill-tag">3D Animation</span>
-          </div>
-        </div>
-
-        <!-- Engineering Workflow & Tools -->
-        <div class="skill-category-card reveal reveal-delay-3">
-          <div class="skill-cat-header">
-            <div class="skill-cat-icon">🛠️</div>
-            <h4>Workflow & Design</h4>
-          </div>
-          <div class="skill-tags">
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">GitHub</span>
-            <span class="skill-tag">Figma (UI/UX)</span>
-            <span class="skill-tag">Stripe Payments</span>
-            <span class="skill-tag">Team Collaboration</span>
-            <span class="skill-tag">Responsive Design</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects Showcase Section -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Portfolio Showcase</span>
-        <h2 class="section-title">Featured Projects</h2>
-        <p class="section-description">
-          A selection of real-world mobile apps, web solutions, Java desktop systems, and 3D game mechanics.
-        </p>
-      </div>
-
-      <!-- Filter Tabs -->
-      <div class="projects-filter-bar reveal">
-        <button class="filter-btn active" data-filter="all">All Projects (10)</button>
-        <button class="filter-btn" data-filter="mobile">Mobile Apps (Flutter & RN)</button>
-        <button class="filter-btn" data-filter="web">Web & Full Stack</button>
-        <button class="filter-btn" data-filter="software">Java & Desktop</button>
-        <button class="filter-btn" data-filter="gamedev">Game Dev & 3D (UE5/Blender)</button>
-      </div>
-
-      <!-- Projects Grid (Populated dynamically via main.js) -->
-      <div class="projects-grid" id="projectsContainer">
-        <!-- Rendered via main.js -->
-      </div>
-    </div>
-  </section>
-
-  <!-- Education & Academic Foundation -->
-  <section id="education" style="background: var(--bg-secondary); border-top: 1px solid var(--border-color);">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Academics</span>
-        <h2 class="section-title">Education & Milestones</h2>
-        <p class="section-description">
-          Solid grounding in computer science theory, algorithms, software engineering principles, and collaborative team research.
-        </p>
-      </div>
-
-      <div style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem;">
-        
-        <!-- University Degree -->
-        <div class="about-card-box reveal" style="display: flex; gap: 1.5rem; align-items: flex-start;">
-          <div class="edu-icon" style="width: 56px; height: 56px; font-size: 1.8rem;">🏛️</div>
-          <div style="flex-grow: 1;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem;">
-              <h3 style="font-size: 1.35rem; color: var(--text-primary);">Bachelor of Computer Science (BCS)</h3>
-              <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-cyan); background: rgba(6, 182, 212, 0.1); padding: 0.2rem 0.75rem; border-radius: var(--radius-full);">Undergraduate</span>
-            </div>
-            <h4 style="font-size: 1.05rem; color: var(--accent-primary); margin-bottom: 0.5rem;">Department of Computer Science, University of Ruhuna, Sri Lanka</h4>
-            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem;">
-              Comprehensive curriculum covering Object-Oriented Programming (Java), Data Structures & Algorithms, Database Management Systems (SQL & Relational DBs), Web & Mobile Application Development, Operating Systems, Software Engineering methodologies, and group research capstones (e.g., InstaLearn tuition management platform under supervisor Mrs. T.D.G. Geethika).
-            </p>
-          </div>
-        </div>
-
-        <!-- CeylonEdge Internship Challenge -->
-        <div class="about-card-box reveal reveal-delay-1" style="display: flex; gap: 1.5rem; align-items: flex-start;">
-          <div class="edu-icon" style="width: 56px; height: 56px; font-size: 1.8rem; background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.3); color: var(--accent-emerald);">🚀</div>
-          <div style="flex-grow: 1;">
-            <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.25rem;">
-              <h3 style="font-size: 1.35rem; color: var(--text-primary);">Flutter Mobile Developer Internship Challenge</h3>
-              <span style="font-size: 0.85rem; font-weight: 600; color: var(--accent-emerald); background: rgba(16, 185, 129, 0.1); padding: 0.2rem 0.75rem; border-radius: var(--radius-full);">CeylonEdge (PVT) LTD</span>
-            </div>
-            <p style="color: var(--text-secondary); line-height: 1.7; font-size: 0.95rem; margin-top: 0.5rem;">
-              Demonstrated mastery in real-world Flutter architecture, REST API orchestration (JSONPlaceholder & Picsum), persistent caching with SharedPreferences, and reactive state management with Provider through "The Tiny Toes" gallery application.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact & Connect Section -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">Let's Connect</span>
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-description">
-          Have an exciting project, internship opportunity, or collaboration in mind? Reach out directly.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <!-- Direct Contact Details -->
-        <div class="contact-info-card reveal">
-          <div class="contact-item">
-            <div class="contact-icon-box">📧</div>
-            <div class="contact-text">
-              <h5>Email Address</h5>
-              <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
-                <a href="mailto:01nimantha@gmail.com">01nimantha@gmail.com</a>
-                <button class="copy-btn" id="copyEmailBtn" title="Copy to clipboard">📋 Copy</button>
+            <!-- Floating Badges -->
+            <div class="hero-float-card top-right">
+              <span class="float-icon">📱</span>
+              <div>
+                <div class="float-title">Mobile Specialist</div>
+                <div class="float-val">Flutter & React Native</div>
               </div>
             </div>
-          </div>
 
-          <div class="contact-item">
-            <div class="contact-icon-box">📞</div>
-            <div class="contact-text">
-              <h5>Direct Phone / WhatsApp</h5>
-              <p><a href="tel:+94762637657">+94 76 263 7657</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-icon-box">📍</div>
-            <div class="contact-text">
-              <h5>Location</h5>
-              <p>Horana, Western Province, Sri Lanka</p>
-            </div>
-          </div>
-
-          <div class="contact-item" style="margin-bottom: 0;">
-            <div class="contact-icon-box">💼</div>
-            <div class="contact-text">
-              <h5>Professional Profiles</h5>
-              <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
-                <a href="https://www.linkedin.com/in/01nimantha/" target="_blank" class="btn btn-sm btn-primary">LinkedIn Profile ↗</a>
-                <a href="https://github.com/01nimantha" target="_blank" class="btn btn-sm btn-secondary">GitHub ↗</a>
+            <div class="hero-float-card bottom-left">
+              <span class="float-icon">🎓</span>
+              <div>
+                <div class="float-title">Undergraduate</div>
+                <div class="float-val">Univ. of Ruhuna (BCS)</div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Quick Email Form -->
-        <div class="contact-form-box reveal reveal-delay-2">
-          <h3 style="font-size: 1.35rem; color: var(--text-primary); margin-bottom: 1.25rem;">Send a Direct Message</h3>
-          <form id="quickContactForm">
-            <div class="form-group">
-              <label for="formName">Your Name</label>
-              <input type="text" id="formName" class="form-control" placeholder="e.g. John Doe" required />
-            </div>
-            <div class="form-group">
-              <label for="formSubject">Subject</label>
-              <input type="text" id="formSubject" class="form-control" placeholder="e.g. Project Inquiry / Job Opportunity" required />
-            </div>
-            <div class="form-group">
-              <label for="formMessage">Message</label>
-              <textarea id="formMessage" class="form-control" placeholder="Type your message here..." required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
-              <span>📨 Send Message via Email Client</span>
-            </button>
-          </form>
+    <!-- Quick Metrics / Stats Bar with Counter Animation -->
+    <div class="stats-section">
+      <div class="container stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-number gradient-text" data-count="4" data-suffix="+">
+            4+
+          </div>
+          <div class="stat-label">Published Play Store Apps</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-1">
+          <div
+            class="stat-number gradient-text"
+            data-count="10"
+            data-suffix="+"
+          >
+            10+
+          </div>
+          <div class="stat-label">Completed Software Projects</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-2">
+          <div class="stat-number gradient-text" data-text="BCS">BCS</div>
+          <div class="stat-label">Univ. of Ruhuna Undergraduate</div>
+        </div>
+        <div class="stat-card reveal reveal-delay-3">
+          <div
+            class="stat-number gradient-text"
+            data-count="100"
+            data-suffix="%"
+          >
+            100%
+          </div>
+          <div class="stat-label">Commitment to Privacy & Quality</div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Project Deep View Modal -->
-  <div class="modal-overlay" id="projectModalOverlay">
-    <div class="modal-container">
-      <div class="modal-header">
-        <div>
-          <h3 id="modalTitle" style="font-size: 1.35rem; color: var(--text-primary);">Project Title</h3>
-          <span id="modalCategory" style="font-size: 0.85rem; color: var(--accent-cyan); font-weight: 500;">Category</span>
-        </div>
-        <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Project Modal">✕</button>
-      </div>
-      <div class="modal-body" id="modalBodyContent">
-        <!-- Injected via JavaScript -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Fullscreen Image Lightbox with Left & Right Arrows -->
-  <div class="image-lightbox" id="imageLightbox">
-    <span class="lightbox-close" id="lightboxClose">&times;</span>
-    <button class="lightbox-nav-btn lightbox-prev" id="lightboxPrev" aria-label="Previous image">‹</button>
-    <img src="" alt="" class="image-lightbox-img" id="lightboxImg" referrerpolicy="no-referrer" />
-    <button class="lightbox-nav-btn lightbox-next" id="lightboxNext" aria-label="Next image">›</button>
-  </div>
-
-  <!-- Toast Notification -->
-  <div class="toast-notice" id="toastNotice">
-    <span>✓</span>
-    <span class="toast-text">Notification</span>
-  </div>
-
-  <!-- Floating Back to Top Button -->
-  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Scroll to top">↑</button>
-
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h4>P.V. Nimantha Madhushan</h4>
-          <p>
-            Full-Stack Software Engineer, Mobile Application Developer, and BCS Undergraduate at University of Ruhuna, Sri Lanka. Co-owner & developer at <a href="https://01nimantha.github.io/madhushan-studios/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: underline;">Madhushan Studios ↗</a>.
+    <!-- About Me Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">About Me</span>
+          <h2 class="section-title">
+            Engineering Scalable Software & Delightful User Experiences
+          </h2>
+          <p class="section-description">
+            A balanced blend of theoretical computer science foundation and
+            real-world production app development.
           </p>
         </div>
 
-        <div class="footer-col">
-          <h5>Quick Navigation</h5>
-          <ul class="footer-links">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Technical Skills</a></li>
-            <li><a href="#projects">Featured Projects</a></li>
-            <li><a href="#studio">Studio Spotlight</a></li>
-            <li><a href="https://01nimantha.github.io/madhushan-studios/" target="_blank" rel="noopener noreferrer">Madhushan Studios Site ↗</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="https://01nimantha.github.io/CV/" target="_blank">Download Resume ↗</a></li>
-          </ul>
-        </div>
+        <div class="about-grid">
+          <!-- Bio & Philosophy -->
+          <div class="about-content reveal">
+            <h3>Driven by Innovation, Privacy, and Clean Code</h3>
+            <p>
+              I am an undergraduate pursuing my
+              <strong>Bachelor of Computer Science (BCS)</strong> at the
+              <strong>University of Ruhuna, Sri Lanka</strong>. I have built and
+              deployed apps used by real customers, ranging from utility
+              software and productivity planners to specialized enterprise
+              billing solutions and gaming simulations.
+            </p>
+            <p>
+              Beyond academia, I co-own and develop software at
+              <strong
+                ><a
+                  href="https://01nimantha.github.io/madhushan-studios/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="
+                    color: var(--accent-primary);
+                    text-decoration: underline;
+                  "
+                  >Madhushan Studios ↗</a
+                ></strong
+              >
+              alongside Ruwantha Madhushan. Together, we have authored,
+              optimized, and deployed multiple published Android applications on
+              the Google Play Store, managing the full development lifecycle
+              from architecture to production release.
+            </p>
+            <p>
+              Whether it's writing robust backend APIs with Spring Boot and
+              FastAPI, building dynamic mobile apps with Flutter, or
+              experimenting with Unreal Engine 5 AI and Blender 3D character
+              sculpting, I thrive at the intersection of logic, design, and
+              performance.
+            </p>
 
-        <div class="footer-col">
-          <h5>App Privacy Policies</h5>
-          <ul class="footer-links">
-            <li><a href="https://01nimantha.github.io/Todo-List-Privacy-Policy/" target="_blank">Todo List Policy ↗</a></li>
-            <li><a href="https://01nimantha.github.io/Cat-Tap-Hunt-Kitty-Game-Privacy-Policy/" target="_blank">Cat Tap Hunt Policy ↗</a></li>
-            <li><a href="https://01nimantha.github.io/VRNT-Engineers-Privacy-Policy/" target="_blank">VRNT Engineers Policy ↗</a></li>
-            <li><a href="https://01ruwantha.github.io/calculator-privacy-policy/" target="_blank">Calculator Policy ↗</a></li>
-          </ul>
+            <div class="about-highlights">
+              <div class="about-pill">
+                <span class="pill-icon">⚡</span>
+                <span>Full-Stack & Mobile Development</span>
+              </div>
+              <div class="about-pill">
+                <span class="pill-icon">🔒</span>
+                <span>100% Privacy & Zero-Data-Leak Design</span>
+              </div>
+              <div class="about-pill">
+                <span class="pill-icon">🎨</span>
+                <span>UI/UX Focused with Figma Mastery</span>
+              </div>
+              <div class="about-pill">
+                <span class="pill-icon">🎮</span>
+                <span>Game AI & 3D Asset Creation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Academic & Quick Details Card -->
+          <div class="about-card-box reveal reveal-delay-2">
+            <div class="edu-item">
+              <div class="edu-icon">🎓</div>
+              <div class="edu-details">
+                <h4>Bachelor of Computer Science (BCS)</h4>
+                <div class="edu-school">University of Ruhuna, Sri Lanka</div>
+                <div class="edu-desc">
+                  Undergraduate Student • Department of Computer Science •
+                  Faculty of Science
+                </div>
+              </div>
+            </div>
+
+            <div class="edu-item">
+              <div class="edu-icon">🏢</div>
+              <div class="edu-details">
+                <h4>Co-Owner & Lead Developer</h4>
+                <div class="edu-school">
+                  <a
+                    href="https://01nimantha.github.io/madhushan-studios/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style="color: inherit; text-decoration: underline"
+                    >Madhushan Studios ↗</a
+                  >
+                </div>
+                <div class="edu-desc">
+                  Independent mobile app development studio with 4+ live Android
+                  apps on Google Play.
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-quick-list">
+              <div class="contact-quick-item">
+                <span class="item-icon">📍</span>
+                <span
+                  ><strong>Location:</strong> Horana, Western Province, Sri
+                  Lanka</span
+                >
+              </div>
+              <div class="contact-quick-item">
+                <span class="item-icon">📧</span>
+                <span
+                  ><strong>Email:</strong>
+                  <a href="mailto:01nimantha@gmail.com"
+                    >01nimantha@gmail.com</a
+                  ></span
+                >
+              </div>
+              <div class="contact-quick-item">
+                <span class="item-icon">📞</span>
+                <span
+                  ><strong>Phone:</strong>
+                  <a href="tel:+94762637657">+94 76 263 7657</a></span
+                >
+              </div>
+              <div class="contact-quick-item">
+                <span class="item-icon">💼</span>
+                <span
+                  ><strong>LinkedIn:</strong>
+                  <a
+                    href="https://www.linkedin.com/in/01nimantha/"
+                    target="_blank"
+                    >linkedin.com/in/01nimantha</a
+                  ></span
+                >
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="footer-bottom">
-        <div>
-          &copy; <span id="currentYear">2026</span> P.V. Nimantha Madhushan. All rights reserved.
+    <!-- Madhushan Studios Published Apps Spotlight -->
+    <section
+      id="studio"
+      style="
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
+      "
+    >
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Published Production Apps</span>
+          <h2 class="section-title">Madhushan Studios Spotlight</h2>
+          <p class="section-description">
+            Live applications published and maintained on the Google Play Store
+            with thousands of users worldwide.
+          </p>
+          <div style="margin-top: 1.25rem">
+            <a
+              href="https://01nimantha.github.io/madhushan-studios/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline"
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 8px;
+                padding: 10px 22px;
+                font-weight: 600;
+                border-radius: var(--radius-full);
+              "
+            >
+              <span>🌐</span> Visit Official Madhushan Studios Website ↗
+            </a>
+          </div>
         </div>
-        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
-          <a href="#hero">Back to Top ↑</a>
-          <a href="https://01nimantha.github.io/madhushan-studios/" target="_blank" rel="noopener noreferrer">Madhushan Studios</a>
-          <a href="https://github.com/01nimantha" target="_blank" rel="noopener noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/01nimantha/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+
+        <!-- Studio Apps Grid -->
+        <div
+          class="skills-grid"
+          style="grid-template-columns: repeat(auto-fit, minmax(270px, 1fr))"
+        >
+          <!-- App 1: Cat Tap Hunt -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <div
+              style="
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                margin-bottom: 1rem;
+              "
+            >
+              <img
+                src="https://play-lh.googleusercontent.com/gN1oqKE8nEvq8OIjdAtISeunBxRYI-Ml1g57eKESDc8C-OZGkPZ-DJiLQkNEncwmNgzqjTQRo-6cKK5vfy3j=w480-h960-rw"
+                alt="Cat Tap Hunt"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 14px;
+                  object-fit: cover;
+                "
+              />
+              <div>
+                <h4
+                  style="
+                    font-size: 1.15rem;
+                    color: var(--text-primary);
+                    margin-bottom: 0.2rem;
+                  "
+                >
+                  Cat Tap Hunt
+                </h4>
+                <span
+                  style="
+                    font-size: 0.8rem;
+                    color: var(--accent-cyan);
+                    font-weight: 600;
+                  "
+                  >Simulation & Video Rec</span
+                >
+              </div>
+            </div>
+            <p
+              style="
+                font-size: 0.9rem;
+                color: var(--text-secondary);
+                margin-bottom: 1.25rem;
+              "
+            >
+              Cat hunting interactive game with automatic video recording, 11
+              realistic prey species, and custom physics.
+            </p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.vrnt.cat_tap_hunt_kitty_game"
+                target="_blank"
+                class="btn btn-sm btn-playstore"
+                style="flex: 1"
+                >Google Play</a
+              >
+              <a href="cat-tap-hunt.html" class="btn btn-sm btn-outline"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!-- App 2: Todo List -->
+          <div class="skill-category-card reveal reveal-delay-2">
+            <div
+              style="
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                margin-bottom: 1rem;
+              "
+            >
+              <img
+                src="assets/images/Todo List/1754559609910.jpeg"
+                alt="Todo List"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 14px;
+                  object-fit: cover;
+                "
+                onerror="
+                  this.onerror = null;
+                  this.src =
+                    'https://play-lh.googleusercontent.com/VMR6_UUwS9ABCM4vSwOJ-vAzoeyW_CvWBXtwa_FwvtP8-VIpZjMp_d6HTRlzdtipg4bOJ2V2gnKrwXPkAV-R=w480-h960-rw';
+                "
+              />
+              <div>
+                <h4
+                  style="
+                    font-size: 1.15rem;
+                    color: var(--text-primary);
+                    margin-bottom: 0.2rem;
+                  "
+                >
+                  Todo List
+                </h4>
+                <span
+                  style="
+                    font-size: 0.8rem;
+                    color: var(--accent-cyan);
+                    font-weight: 600;
+                  "
+                  >Productivity & Tasks</span
+                >
+              </div>
+            </div>
+            <p
+              style="
+                font-size: 0.9rem;
+                color: var(--text-secondary);
+                margin-bottom: 1.25rem;
+              "
+            >
+              Minimalist, zero-data-collection task planner and daily reminder
+              app built with Flutter and Provider.
+            </p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.todolist.todo_list"
+                target="_blank"
+                class="btn btn-sm btn-playstore"
+                style="flex: 1"
+                >Google Play</a
+              >
+              <a href="todo-list.html" class="btn btn-sm btn-outline"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!-- App 3: VRNT Engineers -->
+          <div class="skill-category-card reveal reveal-delay-3">
+            <div
+              style="
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                margin-bottom: 1rem;
+              "
+            >
+              <img
+                src="https://play-lh.googleusercontent.com/yTdKci_R2glOmmrDUkj8o8CcdIXVUa71w2Qwu2hYG4BSekzktZvcxeFp7NBDb1IisqE8-wZqx0t-JGCyQ2YQ6w=w480-h960-rw"
+                alt="VRNT Engineers"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 14px;
+                  object-fit: cover;
+                "
+              />
+              <div>
+                <h4
+                  style="
+                    font-size: 1.15rem;
+                    color: var(--text-primary);
+                    margin-bottom: 0.2rem;
+                  "
+                >
+                  VRNT Engineers
+                </h4>
+                <span
+                  style="
+                    font-size: 0.8rem;
+                    color: var(--accent-cyan);
+                    font-weight: 600;
+                  "
+                  >Business & Billing</span
+                >
+              </div>
+            </div>
+            <p
+              style="
+                font-size: 0.9rem;
+                color: var(--text-secondary);
+                margin-bottom: 1.25rem;
+              "
+            >
+              Professional PDF invoicing & estimation tool tailored for
+              construction businesses with WhatsApp export.
+            </p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.vrnt.engineers"
+                target="_blank"
+                class="btn btn-sm btn-playstore"
+                style="flex: 1"
+                >Google Play</a
+              >
+              <a href="vrnt-engineers.html" class="btn btn-sm btn-outline"
+                >Read More</a
+              >
+            </div>
+          </div>
+
+          <!-- App 4: Calculator -->
+          <div class="skill-category-card reveal reveal-delay-4">
+            <div
+              style="
+                display: flex;
+                gap: 1rem;
+                align-items: center;
+                margin-bottom: 1rem;
+              "
+            >
+              <img
+                src="https://play-lh.googleusercontent.com/PtxNgNKT23-IsUpOwoau_nxvtO8b5XHUNEH9175s--U64Wd_5QungrkMrY_1Y2QB9esIhLaWr0MbjTyLMNNI=w480-h960-rw"
+                alt="Calculator"
+                style="
+                  width: 60px;
+                  height: 60px;
+                  border-radius: 14px;
+                  object-fit: cover;
+                "
+              />
+              <div>
+                <h4
+                  style="
+                    font-size: 1.15rem;
+                    color: var(--text-primary);
+                    margin-bottom: 0.2rem;
+                  "
+                >
+                  Smart Calculator
+                </h4>
+                <span
+                  style="
+                    font-size: 0.8rem;
+                    color: var(--accent-cyan);
+                    font-weight: 600;
+                  "
+                  >Math & Split Tablet UI</span
+                >
+              </div>
+            </div>
+            <p
+              style="
+                font-size: 0.9rem;
+                color: var(--text-secondary);
+                margin-bottom: 1.25rem;
+              "
+            >
+              Responsive offline calculator with Hive NoSQL history persistence
+              and tablet dual-pane layout.
+            </p>
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ceynext.calculator_app"
+                target="_blank"
+                class="btn btn-sm btn-playstore"
+                style="flex: 1"
+                >Google Play</a
+              >
+              <a href="calculator.html" class="btn btn-sm btn-outline"
+                >Read More</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Expertise</span>
+          <h2 class="section-title">Technical Skills & Technologies</h2>
+          <p class="section-description">
+            A versatile toolkit spanning mobile development, full-stack web
+            architectures, enterprise Java, and 3D game engines.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Mobile App Development -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">📱</div>
+              <h4>Mobile Development</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Flutter</span>
+              <span class="skill-tag">Dart</span>
+              <span class="skill-tag">React Native</span>
+              <span class="skill-tag">Provider (State)</span>
+              <span class="skill-tag">Android Studio</span>
+              <span class="skill-tag">Google Play Console</span>
+              <span class="skill-tag">flutter_stripe</span>
+              <span class="skill-tag">SharedPreferences</span>
+            </div>
+          </div>
+
+          <!-- Full Stack & Web -->
+          <div class="skill-category-card reveal reveal-delay-2">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">🌐</div>
+              <h4>Web & Full Stack</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">React.js</span>
+              <span class="skill-tag">Redux</span>
+              <span class="skill-tag">JavaScript (ES6+)</span>
+              <span class="skill-tag">HTML5 & CSS3</span>
+              <span class="skill-tag">Bootstrap</span>
+              <span class="skill-tag">Spring Boot</span>
+              <span class="skill-tag">Node.js</span>
+              <span class="skill-tag">Express.js</span>
+              <span class="skill-tag">FastAPI (Python)</span>
+              <span class="skill-tag">RESTful APIs</span>
+            </div>
+          </div>
+
+          <!-- Databases & Cloud Backend -->
+          <div class="skill-category-card reveal reveal-delay-3">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">🗄️</div>
+              <h4>Databases & Cloud</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">Cloud Firestore</span>
+              <span class="skill-tag">MongoDB</span>
+              <span class="skill-tag">Firebase Auth</span>
+              <span class="skill-tag">Hive (NoSQL)</span>
+              <span class="skill-tag">JSON / REST APIs</span>
+            </div>
+          </div>
+
+          <!-- Software Engineering & Java -->
+          <div class="skill-category-card reveal reveal-delay-1">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">☕</div>
+              <h4>Java & Software Eng</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">OOP Principles</span>
+              <span class="skill-tag">Java Swing GUI</span>
+              <span class="skill-tag">File Handling / IO</span>
+              <span class="skill-tag">Unit Testing</span>
+              <span class="skill-tag">Data Structures</span>
+            </div>
+          </div>
+
+          <!-- Game Dev & 3D Art -->
+          <div class="skill-category-card reveal reveal-delay-2">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">🎮</div>
+              <h4>Game Dev & 3D Art</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Unreal Engine 5</span>
+              <span class="skill-tag">UE5 Blueprints</span>
+              <span class="skill-tag">AI Behavior Trees</span>
+              <span class="skill-tag">Blender (3D)</span>
+              <span class="skill-tag">Character Sculpting</span>
+              <span class="skill-tag">Texture Painting</span>
+              <span class="skill-tag">Armature Rigging</span>
+              <span class="skill-tag">3D Animation</span>
+            </div>
+          </div>
+
+          <!-- Engineering Workflow & Tools -->
+          <div class="skill-category-card reveal reveal-delay-3">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">🛠️</div>
+              <h4>Workflow & Design</h4>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">GitHub</span>
+              <span class="skill-tag">Figma (UI/UX)</span>
+              <span class="skill-tag">Stripe Payments</span>
+              <span class="skill-tag">Team Collaboration</span>
+              <span class="skill-tag">Responsive Design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Showcase Section -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Portfolio Showcase</span>
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-description">
+            A selection of real-world mobile apps, web solutions, Java desktop
+            systems, and 3D game mechanics.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="projects-filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">
+            All Projects (10)
+          </button>
+          <button class="filter-btn" data-filter="mobile">
+            Mobile Apps (Flutter & RN)
+          </button>
+          <button class="filter-btn" data-filter="web">Web & Full Stack</button>
+          <button class="filter-btn" data-filter="software">
+            Java & Desktop
+          </button>
+          <button class="filter-btn" data-filter="gamedev">
+            Game Dev & 3D (UE5/Blender)
+          </button>
+        </div>
+
+        <!-- Projects Grid (Populated dynamically via main.js) -->
+        <div class="projects-grid" id="projectsContainer">
+          <!-- Rendered via main.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Academic Foundation -->
+    <section
+      id="education"
+      style="
+        background: var(--bg-secondary);
+        border-top: 1px solid var(--border-color);
+      "
+    >
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Academics</span>
+          <h2 class="section-title">Education & Milestones</h2>
+          <p class="section-description">
+            Solid grounding in computer science theory, algorithms, software
+            engineering principles, and collaborative team research.
+          </p>
+        </div>
+
+        <div
+          style="
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+          "
+        >
+          <!-- University Degree -->
+          <div
+            class="about-card-box reveal"
+            style="display: flex; gap: 1.5rem; align-items: flex-start"
+          >
+            <div
+              class="edu-icon"
+              style="width: 56px; height: 56px; font-size: 1.8rem"
+            >
+              🏛️
+            </div>
+            <div style="flex-grow: 1">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: baseline;
+                  flex-wrap: wrap;
+                  gap: 0.5rem;
+                  margin-bottom: 0.25rem;
+                "
+              >
+                <h3 style="font-size: 1.35rem; color: var(--text-primary)">
+                  Bachelor of Computer Science (BCS)
+                </h3>
+                <span
+                  style="
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: var(--accent-cyan);
+                    background: rgba(6, 182, 212, 0.1);
+                    padding: 0.2rem 0.75rem;
+                    border-radius: var(--radius-full);
+                  "
+                  >Undergraduate</span
+                >
+              </div>
+              <h4
+                style="
+                  font-size: 1.05rem;
+                  color: var(--accent-primary);
+                  margin-bottom: 0.5rem;
+                "
+              >
+                Department of Computer Science, University of Ruhuna, Sri Lanka
+              </h4>
+              <p
+                style="
+                  color: var(--text-secondary);
+                  line-height: 1.7;
+                  font-size: 0.95rem;
+                "
+              >
+                Comprehensive curriculum covering Object-Oriented Programming
+                (Java), Data Structures & Algorithms, Database Management
+                Systems (SQL & Relational DBs), Web & Mobile Application
+                Development, Operating Systems, Software Engineering
+                methodologies, and group research capstones (e.g., InstaLearn
+                tuition management platform under supervisor Mrs. T.D.G.
+                Geethika).
+              </p>
+            </div>
+          </div>
+
+          <!-- CeylonEdge Internship Challenge -->
+          <div
+            class="about-card-box reveal reveal-delay-1"
+            style="display: flex; gap: 1.5rem; align-items: flex-start"
+          >
+            <div
+              class="edu-icon"
+              style="
+                width: 56px;
+                height: 56px;
+                font-size: 1.8rem;
+                background: rgba(16, 185, 129, 0.1);
+                border-color: rgba(16, 185, 129, 0.3);
+                color: var(--accent-emerald);
+              "
+            >
+              🚀
+            </div>
+            <div style="flex-grow: 1">
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: baseline;
+                  flex-wrap: wrap;
+                  gap: 0.5rem;
+                  margin-bottom: 0.25rem;
+                "
+              >
+                <h3 style="font-size: 1.35rem; color: var(--text-primary)">
+                  Flutter Mobile Developer Internship Challenge
+                </h3>
+                <span
+                  style="
+                    font-size: 0.85rem;
+                    font-weight: 600;
+                    color: var(--accent-emerald);
+                    background: rgba(16, 185, 129, 0.1);
+                    padding: 0.2rem 0.75rem;
+                    border-radius: var(--radius-full);
+                  "
+                  >CeylonEdge (PVT) LTD</span
+                >
+              </div>
+              <p
+                style="
+                  color: var(--text-secondary);
+                  line-height: 1.7;
+                  font-size: 0.95rem;
+                  margin-top: 0.5rem;
+                "
+              >
+                Demonstrated mastery in real-world Flutter architecture, REST
+                API orchestration (JSONPlaceholder & Picsum), persistent caching
+                with SharedPreferences, and reactive state management with
+                Provider through "The Tiny Toes" gallery application.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-description">
+            Have an exciting project, internship opportunity, or collaboration
+            in mind? Reach out directly.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Details -->
+          <div class="contact-info-card reveal">
+            <div class="contact-item">
+              <div class="contact-icon-box">📧</div>
+              <div class="contact-text">
+                <h5>Email Address</h5>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 0.5rem;
+                  "
+                >
+                  <a href="mailto:01nimantha@gmail.com">01nimantha@gmail.com</a>
+                  <button
+                    class="copy-btn"
+                    id="copyEmailBtn"
+                    title="Copy to clipboard"
+                  >
+                    📋 Copy
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">📞</div>
+              <div class="contact-text">
+                <h5>Direct Phone / WhatsApp</h5>
+                <p><a href="tel:+94762637657">+94 76 263 7657</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon-box">📍</div>
+              <div class="contact-text">
+                <h5>Location</h5>
+                <p>Horana, Western Province, Sri Lanka</p>
+              </div>
+            </div>
+
+            <div class="contact-item" style="margin-bottom: 0">
+              <div class="contact-icon-box">💼</div>
+              <div class="contact-text">
+                <h5>Professional Profiles</h5>
+                <div style="display: flex; gap: 1rem; margin-top: 0.5rem">
+                  <a
+                    href="https://www.linkedin.com/in/01nimantha/"
+                    target="_blank"
+                    class="btn btn-sm btn-primary"
+                    >LinkedIn Profile ↗</a
+                  >
+                  <a
+                    href="https://github.com/01nimantha"
+                    target="_blank"
+                    class="btn btn-sm btn-secondary"
+                    >GitHub ↗</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Email Form -->
+          <div class="contact-form-box reveal reveal-delay-2">
+            <h3
+              style="
+                font-size: 1.35rem;
+                color: var(--text-primary);
+                margin-bottom: 1.25rem;
+              "
+            >
+              Send a Direct Message
+            </h3>
+            <form id="quickContactForm">
+              <div class="form-group">
+                <label for="formName">Your Name</label>
+                <input
+                  type="text"
+                  id="formName"
+                  class="form-control"
+                  placeholder="e.g. John Doe"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="formSubject">Subject</label>
+                <input
+                  type="text"
+                  id="formSubject"
+                  class="form-control"
+                  placeholder="e.g. Project Inquiry / Job Opportunity"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="formMessage">Message</label>
+                <textarea
+                  id="formMessage"
+                  class="form-control"
+                  placeholder="Type your message here..."
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width: 100%">
+                <span>📨 Send Message via Email Client</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Deep View Modal -->
+    <div class="modal-overlay" id="projectModalOverlay">
+      <div class="modal-container">
+        <div class="modal-header">
+          <div>
+            <h3
+              id="modalTitle"
+              style="font-size: 1.35rem; color: var(--text-primary)"
+            >
+              Project Title
+            </h3>
+            <span
+              id="modalCategory"
+              style="
+                font-size: 0.85rem;
+                color: var(--accent-cyan);
+                font-weight: 500;
+              "
+              >Category</span
+            >
+          </div>
+          <button
+            class="modal-close-btn"
+            id="modalCloseBtn"
+            aria-label="Close Project Modal"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="modal-body" id="modalBodyContent">
+          <!-- Injected via JavaScript -->
         </div>
       </div>
     </div>
-  </footer>
 
-  <!-- Main JavaScript File -->
-  <script src="assets/js/main.js"></script>
-</body>
+    <!-- Fullscreen Image Lightbox with Left & Right Arrows -->
+    <div class="image-lightbox" id="imageLightbox">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <button
+        class="lightbox-nav-btn lightbox-prev"
+        id="lightboxPrev"
+        aria-label="Previous image"
+      >
+        ‹
+      </button>
+      <img
+        src=""
+        alt=""
+        class="image-lightbox-img"
+        id="lightboxImg"
+        referrerpolicy="no-referrer"
+      />
+      <button
+        class="lightbox-nav-btn lightbox-next"
+        id="lightboxNext"
+        aria-label="Next image"
+      >
+        ›
+      </button>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast-notice" id="toastNotice">
+      <span>✓</span>
+      <span class="toast-text">Notification</span>
+    </div>
+
+    <!-- Floating Back to Top Button -->
+    <button
+      class="back-to-top"
+      id="backToTop"
+      aria-label="Back to top"
+      title="Scroll to top"
+    >
+      ↑
+    </button>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h4>P.V. Nimantha Madhushan</h4>
+            <p>
+              Full-Stack Software Engineer, Mobile Application Developer, and
+              BCS Undergraduate at University of Ruhuna, Sri Lanka. Co-owner &
+              developer at
+              <a
+                href="https://01nimantha.github.io/madhushan-studios/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style="color: var(--accent-primary); text-decoration: underline"
+                >Madhushan Studios ↗</a
+              >.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h5>Quick Navigation</h5>
+            <ul class="footer-links">
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#skills">Technical Skills</a></li>
+              <li><a href="#projects">Featured Projects</a></li>
+              <li><a href="#studio">Studio Spotlight</a></li>
+              <li>
+                <a
+                  href="https://01nimantha.github.io/madhushan-studios/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Madhushan Studios Site ↗</a
+                >
+              </li>
+              <li><a href="#education">Education</a></li>
+              <li>
+                <a href="https://01nimantha.github.io/CV/" target="_blank"
+                  >Download Resume ↗</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h5>App Privacy Policies</h5>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://01nimantha.github.io/Todo-List-Privacy-Policy/"
+                  target="_blank"
+                  >Todo List Policy ↗</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://01nimantha.github.io/Cat-Tap-Hunt-Kitty-Game-Privacy-Policy/"
+                  target="_blank"
+                  >Cat Tap Hunt Policy ↗</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://01nimantha.github.io/VRNT-Engineers-Privacy-Policy/"
+                  target="_blank"
+                  >VRNT Engineers Policy ↗</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://01ruwantha.github.io/calculator-privacy-policy/"
+                  target="_blank"
+                  >Calculator Policy ↗</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            &copy; <span id="currentYear">2026</span> P.V. Nimantha Madhushan.
+            All rights reserved.
+          </div>
+          <div style="display: flex; gap: 1.5rem; flex-wrap: wrap">
+            <a href="#hero">Back to Top ↑</a>
+            <a
+              href="https://01nimantha.github.io/madhushan-studios/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Madhushan Studios</a
+            >
+            <a
+              href="https://github.com/01nimantha"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/01nimantha/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Main JavaScript File -->
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>
